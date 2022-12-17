@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=El+Messiri&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Almarai', sans-serif;
+            font-family: 'El Messiri', sans-serif;
+            font-weight: bold;
+            caret-color: white;
+        }
+
+        #-body {
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgb(36, 15, 15),rgb(97, 97, 160),rgb(36, 15, 15));
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .main {
+            /* display: flex;
+            justify-content: center;
+            background-color: cornflowerblue; */
+        }
+
+        .payment {
+            /* display: flex;
+            justify-content: center; */
+
+            /* border: 3px solid blue; */
+
+        }
+
+        .text-center {
+            color: #a9a3a3;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+            font-size: 50px;
+            font-weight: bold;
+
+
+        }
+
+        .label_1 {
+
+            font-size: 20px;
+            color: #d2caca;
+
+        }
+
+        .inpmain {
+            margin-left: 200px;
+
+        }
+
+        .inp1 {
+            text-align: center;
+            height: 40px;
+            width: 80px;
+            background-color: #474343;
+            border: 0;
+            margin: 10px 5px;
+            text-transform: uppercase;
+            outline: none;
+
+
+        }
+
+        .inp1:focus {
+            background-color:  #474343;
+            box-shadow: inset 0 0 8px 1px rgb(146, 146, 146);
+        }
+
+        .inp2 {
+            padding: 10px;
+            height: 40px;
+            width: 100%;
+            background-color: #474343;;
+            border: 0;
+            margin: 10px 5px;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .inp2:focus {
+            background-color: #474343;;
+            box-shadow: inset 0 0 8px 1px rgb(146, 146, 146);
+        }
+
+        .inp3 {
+            text-align: center;
+            height: 40px;
+            width: 50px;
+            background-color:  #474343;;
+            border: 0;
+            margin: 20px 0px;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .inp3:focus {
+            background-color:  #474343;;
+            box-shadow: inset 0 0 8px 1px rgb(146, 146, 146) ;
+        }
+
+        .inp4 {
+            text-align: center;
+            height: 40px;
+            width: 80px;
+            background-color: #474343;;
+            border: 0;
+            margin: 10px 0px;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .inp4:focus {
+            background-color:  #474343;
+            box-shadow: inset 0 0 8px 1px rgb(146, 146, 146);
+        }
+
+        /* ************************************ part1********************** */
+        .card1 {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            /* background-color: #13b768; */
+
+        }
+
+        .clayout {
+            /* background-color: rgb(6, 58, 155); */
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .c-front {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #f0f0f0;
+            width: 360px;
+            height: 230px;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .x {
+
+            width: 81%;
+            height: 170px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: -96px;
+            background: linear-gradient(to bottom, #e2e2e2 50%, #e8e8e8 70%, #f0f0f0 88%, #fff 100%);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(51deg) translateX(0);
+            overflow: hidden;
+        }
+
+        .y {
+            overflow: hidden;
+            width: 74%;
+            height: 170px;
+            background-color: #d9d6d6;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: -100px;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(51deg) translateX(0);
+        }
+
+        .img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .chip {
+            /* border: 2px solid rgb(52, 206, 0); */
+
+            position: relative;
+            height: 30px;
+            width: 43px;
+            display: block;
+            border-radius: 5px;
+            background: #60aaf7;
+        }
+
+        .chip::before {
+            z-index: 888;
+            background: url(./asset/img/shetab.png)no-repeat center/100% 140%;
+            object-fit: cover;
+            ;
+            /* background-color: darkmagenta */
+            content: "";
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 43px;
+
+        }
+
+        .cnum {
+            margin: 30px;
+            font-size: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        .cvv2 {}
+
+        .Valid {
+            /* border: 2px solid rgb(39, 40, 40); */
+            /* display: flex; */
+            justify-content: flex-end;
+            /* padding-right: 10px; */
+            z-index: 2;
+        }
+
+        .bank-color {
+            width: 78%;
+            height: 51px;
+            position: absolute;
+            bottom: -32px;
+            border-radius: 32px;
+            left: 12%;
+        }
+
+        #saman {
+            opacity: 0;
+        }
+
+        #melat {
+            opacity: 0;
+        }
+
+        #shahr {
+            opacity: 0;
+
+        }
+
+        #meli {
+            opacity: 0;
+        }
+
+        #tejarat {
+            opacity: 0;
+        }
+
+        #samanB {
+            background-color: #00aae8;
+            opacity: 0;
+
+        }
+
+        #melatB {
+            background-color: #d12236;
+            opacity: 0;
+        }
+
+        #shahrB {
+            background-color: #dd0000;
+            opacity: 0;
+        }
+
+        #meliB {
+            background-color: #fff7b1;
+            opacity: 0;
+        }
+
+        #tejaratB {
+            background-color: #2e428d;
+            opacity: 0;
+        }
+
+        #other {
+            
+            opacity: 0;
+        }
+
+        #otherB {
+            background-color: #1603a6;
+            opacity: 0;
+        }
+
+        #show {
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="-body" class="container-fluid container-xxl  px-0 overflow-hidden">
+        <div class="row main">
+            <h1 class="text-center col-12 ">Enter Card Details</h1>
+            <div class="col-6 payment">
+                <div id="part1" class=" col-12  ">
+                    <div class="col-12   inpmain">
+                        <label for="" class=" col-12 label_1">Card Number</label>
+                        <input type="text" id="logo0" class="inp1 text-white" oninput="mofi(this,0)">
+                        <input type="text" class="inp1 text-white" oninput="mofi(this,1)">
+                        <input type="text" class="inp1 text-white" oninput="mofi(this,2)">
+                        <input type="text" class="inp1 text-white" oninput="mofi(this,3)">
+                    </div>
+                    <!-- <div class="col-6 inpmain">
+                        <label for="" class=" col-12 label_1">Card Holder's Name</label>
+                        <input type="text" class="inp2 ">
+                    </div> -->
+
+                    <div class="col-12  row ps-1 inpmain ">
+                        <div class="col-3 exp ">
+                            <label for="" class="  col-12 label_1 ">Expire Date</label>
+                            <input type="text" maxlength="2" class="inp3 col-3    text-white" oninput="mydate(this,0)"
+                                id="exp1" placeholder="MM">
+                            <input type="text" maxlength="2" class="inp3 col-3 text-white" oninput="mydate(this,1)"
+                                placeholder="YY">
+                        </div>
+                        <div class="col-3 ">
+                            <label for="" class="col-12  label_1  px-3">CVV2</label>
+                            <input type="text" id="cvv2" minlength="3" maxlength="4"
+                                class="inp4 col-6 text-white   mt-3" oninput="myFunction()">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card1 col-6">
+
+                <div class="clayout col-12 ">
+                    <div class="c-front col-12  ">
+                        <div class="x"></div>
+                        <div class="y"></div>
+                        <img src="asset/img/bank_saman_pec.png" alt="" class="img" id="saman">
+                        <img src="asset/img/bank_shahr_pec.png" alt="" class="img" id="shahr">
+                        <img src="asset/img/bank_tejarat_pec.png" alt="" class="img" id="tejarat">
+                        <img src="asset/img/bank_meli_iran_pec.png" alt="" class="img" id="meli">
+                        <img src="asset/img/bank_mellat_pec.png" alt="" class="img" id="melat">
+                        <img src="asset/img/markazi.png" alt="" class="img" id="other">
+                        <p class="chiplogo  col-12">
+                            <span class="chip col-12 "></span>
+                            <span class="logo"></span>
+                        </p>
+                        <p class="cnum col-12 " id="show">
+
+                        </p>
+                        <div>
+
+                        </div>
+                        <p class="cvv2 col-6 ">
+                            <span>Cvv2</span>
+                            <label for="" class="col-12" id="democv"></label>
+                        </p>
+                        <p class="Valid  row col-6">
+                            <span class=" col-12 ">Expire Date</span>
+                            <label for="" class="col-12  " id="valid"></label>
+
+                        </p>
+                        <div class="bank-color" id="samanB"></div>
+                        <div class="bank-color" id="melatB"></div>
+                        <div class="bank-color" id="shahrB"></div>
+                        <div class="bank-color" id="meliB"></div>
+                        <div class="bank-color" id="tejaratB"></div>
+                        <div class="bank-color" id="otherB"></div>
+                    </div>
+                    <!-- <div class="c-back">
+                        <p>
+                            <span>136589420</span>
+                            <span>sddv5</span>
+                        </p>
+                        <p class="backit"></p>
+                        <p>
+                            <span id="cvv22">cvv2</span>
+                            <b></b>
+                        </p>
+                        
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let _p = document.getElementById('show');
+        let turn = 0;
+        let _inp = document.querySelectorAll(".inpmain>input");
+        _inp[turn].focus()
+
+        function mofi(self, index) {
+            let test = (self.value).length;
+            if (((self.value).length) >= 4) {
+                index++
+                turn = index
+                if (index < 4) {
+                    _inp[index].focus()
+                }
+                else {
+                    document.getElementById('cvv2').focus()
+                }
+            }
+            let temp = self.value;
+            temp = temp.substring(temp.length - 1, temp.length)
+            _p.innerHTML += temp
+
+
+            if ((self.value).length == 4) {
+                // debugger;
+                var q = _p.innerText;
+                var z = q.replace(/ /g, "").replace(/-/g, "");
+                if (z.length != 16) {
+                    _p.innerHTML += " - "
+                }
+            }
+
+            if (((self.value).length == 16)) {
+                document.getElementById('cvv2').focus()
+            }
+
+            // تغییر دادن لوگو بانک های مختلف
+            debugger
+            let numberCard = document.getElementById('logo0').value;
+            console.log(numberCard);
+            if (numberCard == 6037) {
+                document.getElementById('meli').style.opacity = "1"
+                document.getElementById('meliB').style.opacity = "1"
+                document.getElementById('other').style.opacity = "0"
+                document.getElementById('otherB').style.opacity = "0"
+
+            } else if (numberCard == 5047) {
+                document.getElementById('shahr').style.opacity = "1"
+                document.getElementById('shahrB').style.opacity = "1"
+                document.getElementById('other').style.opacity = "0"
+                document.getElementById('otherB').style.opacity = "0"
+            } else if (numberCard == 6104) {
+                document.getElementById('melat').style.opacity = "1"
+                document.getElementById('melatB').style.opacity = "1"
+                document.getElementById('other').style.opacity = "0"
+                document.getElementById('otherB').style.opacity = "0"
+            } else if (numberCard == 5859) {
+                document.getElementById('tejarat').style.opacity = "1"
+                document.getElementById('tejaratB').style.opacity = "1"
+                document.getElementById('other').style.opacity = "0"
+                document.getElementById('otherB').style.opacity = "0"
+            } else{
+                
+                document.getElementById('other').style.opacity = "1"
+                document.getElementById('otherB').style.opacity = "1"
+            }
+
+        }
+
+        // ..............................................
+        // مقدار سی وی وی دو 
+
+        function myFunction() {
+
+            let x = document.getElementById('cvv2').value;
+            if (x.length <= 4) {
+                document.getElementById('democv').innerHTML = x
+
+            }
+            if ((x.length == 4)) {
+                document.getElementById('exp1').focus()
+            }
+
+        }
+        // .............................................
+        // مقدار تاریخ 
+        let _valid = document.getElementById('valid');
+        let num = 0;
+        let _input = document.querySelectorAll(".exp>input");
+
+
+        function mydate(self, t) {
+            if (((self.value).length) >= 2) {
+                t++
+                if (t < 2) {
+                    _input[t].focus()
+                }
+
+            }
+            let temp = self.value;
+            temp = temp.substring(temp.length - 1, temp.length)
+            _valid.innerHTML += temp
+
+
+            if ((self.value).length == 2) {
+                debugger;
+                let p = _valid.innerText;
+                let z = p.replace(/ /g, "").replace(/\//g, "");
+
+                if (z.length != 4) {
+                    _valid.innerHTML += " / "
+                }
+            }
+        }
+        // ....................................................
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
